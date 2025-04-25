@@ -2,8 +2,9 @@ FROM nvidia/cuda:11.7.1-cudnn8-runtime-ubuntu20.04
 
 # 필수 패키지
 RUN apt update && apt install -y \
-    python3 python3-pip git curl unzip libgl1 libegl1 libosmesa6-dev \
-    libxrandr2 libxcursor1 libxinerama1 libxi6 libglfw3 libglew-dev \
+    python3 python3-pip python3-venv python3-dev git curl wget unzip libegl1 libgl1\
+    libosmesa6-dev patchelf libglfw3 libglew-dev libgl1-mesa-dev libglu1-mesa xvfb libglib2.0-0 \
+    libxrandr2 libxcursor1 libxinerama1 libxi6 mesa-utils\
     && rm -rf /var/lib/apt/lists/*
 
 # Python 패키지
