@@ -7,7 +7,7 @@ RUN apt update && apt install -y \
     && rm -rf /var/lib/apt/lists/*
 
 # Python 패키지
-RUN pip install --break-system-packages robosuite==1.5.1 mujoco stable-baselines3 numpy h5py tensorboard imageio
+RUN pip install robosuite==1.5.1 mujoco stable-baselines3 numpy h5py tensorboard imageio
 
 ENV MUJOCO_GL=egl
 WORKDIR /workspace
