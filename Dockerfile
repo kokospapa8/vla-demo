@@ -1,5 +1,5 @@
 FROM nvidia/cuda:11.7.1-cudnn8-runtime-ubuntu20.04
-
+ENV DEBIAN_FRONTEND=noninteractive
 # 필수 패키지
 RUN apt update && apt install -y \
     python3 python3-pip python3-venv python3-dev git curl wget unzip libegl1 libgl1\
